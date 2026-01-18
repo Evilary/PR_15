@@ -24,17 +24,25 @@ namespace Documents_Чернышков.Pages
         public Main()
         {
             InitializeComponent();
+
             CreatedUI();
         }
-        public void Exit(object sender, EventArgs e)
+        public void Exit(object sender, RoutedEventArgs e)
         {
             MainWindow.init.Close();
         }
+
+        public void AddDocuments(object sender, RoutedEventArgs e)
+        {
+            if (MainWindow.init != null)
+                MainWindow.init.OpenPages(MainWindow.pages.add);
+        }
+
         public void CreatedUI()
         {
-            Parent.Children.Clear();    
+            parent.Children.Clear(); 
             foreach (DocumentContext document in MainWindow.init.AllDocuments)
-                Parent.Children.Add(new Elements.Item(document));
+               parent.Children.Add(new Elements.Item(document)); 
         }
     }
 }

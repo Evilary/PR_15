@@ -17,7 +17,7 @@ namespace Documents_Чернышков.Classes
 
             OleDbConnection connection = Common.DBConnection.Connection();
 
-            OleDbDataReader dataDocuments = Common.DBConnect.Query("SELECT * FROM [Документы]", connection);
+            OleDbDataReader dataDocuments = Common.DBConnection.Query("SELECT * FROM [Документы]", connection);
             while (dataDocuments.Read())
             {
                 DocumentContext newDocument = new DocumentContext();
@@ -25,7 +25,7 @@ namespace Documents_Чернышков.Classes
                 newDocument.src = dataDocuments.GetString(1);
                 newDocument.name = dataDocuments.GetString(2);
                 newDocument.user = dataDocuments.GetString(3);
-                newDocument.id_document = dataDocuments.GetInt32(4);
+                newDocument.id_document = dataDocuments.GetString(4);
                 newDocument.date = dataDocuments.GetDateTime(5);
                 newDocument.status = dataDocuments.GetInt32(6);
                 newDocument.vector = dataDocuments.GetString(7);
@@ -62,7 +62,7 @@ namespace Documents_Чернышков.Classes
             }
             else
             {
-                OleDbConnection connection = Common.DBConnect.Connection();
+                OleDbConnection connection = Common.DBConnection.Connection();
                 Common.DBConnection.Query("INSERT INFO " +
                                                 "[Документы]" +
                                                 "([Изображение], " +
@@ -88,9 +88,9 @@ namespace Documents_Чернышков.Classes
 
         public void Delete()
         {
-            OleDbConnection connection = Common.DBConnect.Connection();
-            Common.DBConnect.Query($"DELETE FROM [Документ] WHERE [Код] = {this.id}", connection);
-            Common.DBConnect.CloseConnection(connection);
+            OleDbConnection connection = Common.DBConnection.Connection();
+            Common.DBConnection.Query($"DELETE FROM [Документ] WHERE [Код] = {this.id}", connection);
+            Common.DBConnection.CloseConnection(connection);
         }
     
     

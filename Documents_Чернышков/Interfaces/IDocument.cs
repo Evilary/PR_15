@@ -9,8 +9,8 @@ namespace Documents_Чернышков.Interfaces
     internal interface IDocument
     {
 
-        void save(bool Update =  false);
-        List<Documents.Classes.DocumentContext> AllDocuments();
+        void Save(bool Update =  false);
+        List<Documents_Чернышков.Classes.DocumentContext> AllDocuments();
 
         void Delete();
     }

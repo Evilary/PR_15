@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Documents_Чернышков.Classes;
+using Documents_Чернышков.Pages;
 
 namespace Documents_Чернышков.Elements
 {
@@ -28,12 +29,12 @@ namespace Documents_Чернышков.Elements
 
             img.Source = new BitmapImage(new Uri(Document.src));
 
-            1Name.Content = Document.name;
-            1User.Content = $"Ответсвенный: { Document.user }";
-            1Code.Content = $"Код документа: { Document.id_document }";
-            1Date.Content = $"Дата поступления: {Document.date.ToString("dd.MM.yyyy") }";
-            1Status.Content = Document.status == 0 ? $"Статус : входящий": $"Статус: исходящий";
-            1Direct.Content = "Направление: " + Document.vector;
+            lName.Content = Document.name;
+            lUser.Content = $"Ответсвенный: { Document.user }";
+            lCode.Content = $"Код документа: { Document.id_document }";
+            lDate.Content = $"Дата поступления: {Document.date.ToString("dd.MM.yyyy") }";
+            lStatus.Content = Document.status == 0 ? $"Статус : входящий": $"Статус: исходящий";
+            lDirect.Content = "Направление: " + Document.vector;
 
             this.Document = Document;
 
@@ -46,7 +47,7 @@ namespace Documents_Чернышков.Elements
         private void DeleteDocument(object sender, RoutedEventArgs e)
         {
             Document.Delete();
-            MainWindow.init.AllDocuments = new DocumentContext().AllDocuments;
+            MainWindow.init.AllDocuments = new DocumentContext().AllDocuments();
             MainWindow.init.OpenPages(MainWindow.pages.main);
         }
     }

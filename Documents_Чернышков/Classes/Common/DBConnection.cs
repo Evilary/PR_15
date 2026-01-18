@@ -22,7 +22,7 @@ namespace Documents_Чернышков.Classes.Common
 
         }
 
-        public static OleDbConnection Query(string Query, OleDbConnection Connection)
+        public static OleDbDataReader Query(string Query, OleDbConnection Connection)
         {
             return new OleDbCommand(Query, Connection).ExecuteReader();
         }
