@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="Documents_Чернышков.Elements.Item"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Documents_Чернышков.Elements"
+             mc:Ignorable="d" d:DesignWidth="800" Background="white" Height="474">
+    <Grid>
+
+        <Image Width="247" Height="247" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,10,0,0"
+               Source="C:\Users\df275\source\repos\Documents_Чернышков\Documents_Чернышков\Image\icon-black.png" x:Name="img"/>
+        <Label Content="Наименование" Margin="222,0,363,368" Foreground="#000000" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="25" FontWeight="Bold" x:Name="lName" Height="61" VerticalAlignment="Bottom"/>
+        <Label Content="Ответственный:" Margin="222,109,439,316" Foreground="#000000" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15" x:Name="lUser"/>
+        <Label Content="Код документа:" Margin="232,172,449,272" Foreground="#000000" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15" x:Name="lCode"/>
+        <Label Content="Дата поступления:" Margin="508,63,156,378" Foreground="#000000" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15" x:Name="lDate"/>
+        <Label Content="Статус:" Margin="502,118,233,324" Foreground="#000000" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15" x:Name="lStatus"/>
+        <Label Content="Направления:" Margin="504,166,187,272" Foreground="#000000" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="15" x:Name="lDirect"/>
+        <Button HorizontalAlignment="Right" VerticalAlignment="Top" Width="125" Height="25" Margin="0,240,167,0" Content="Изменить" x:Name="EditDocument"/>
+        <Button HorizontalAlignment="Right" VerticalAlignment="Top" Width="125" Height="25" Margin="0,240,10,0" Content="Удалить" x:Name="DeleteDocument"/>
+
+
+
+    </Grid>
+</UserControl>
