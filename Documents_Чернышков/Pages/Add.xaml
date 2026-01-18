@@ -88,7 +88,7 @@
                     <Button Content="Сохранить"
                             Width="100"
                             Height="28"
-                            Margin="10,0,0,0" x:Name="bthAdd" Click="bthAdd_Click"/>
+                            Margin="10,0,0,0" x:Name="bthAdd"/>
                 </DockPanel>
 
             </StackPanel>
