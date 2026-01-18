@@ -14,7 +14,7 @@ namespace Documents_Чернышков.Classes.Common
 
         public static OleDbConnection Connection()
         {
-            OleDbConnection oleDbConnection = new OleDbConnection("Provider = Microsoft.ACE.OLEDB.12.0; Data Source =" + Path);
+            OleDbConnection oleDbConnection = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source = Database.accdb");
 
             oleDbConnection.Open();
 
